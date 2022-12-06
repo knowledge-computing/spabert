@@ -7,7 +7,6 @@ from transformers import AdamW
 import torch
 from torch.utils.data import DataLoader
 
-sys.path.append('../')
 from models.spatial_bert_model import SpatialBertModel
 from models.spatial_bert_model import SpatialBertConfig
 from models.spatial_bert_model import  SpatialBertForMaskedLM
