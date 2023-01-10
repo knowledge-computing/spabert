@@ -40,4 +40,17 @@ python3 train_cls_spatialbert.py --lr=1e-6 --sep_between_neighbors --bert_option
 Geo-entity linking is to link geo-entities from a geographic information system (GIS) oriented dataset to a knowledge base (KB). This task unsupervised thus does not require any further training. Pretrained models can be directly used for this task. 
 
 
+Linking with SpaBERT-base
+```
+python3 unsupervised_wiki_location_allcand.py --model_name='spatial_bert-base' --sep_between_neighbors \
+ --spatial_bert_weight_dir='weights/' --spatial_bert_weight_name='mlm_mem_keeppos_ep0_iter06000_0.2936.pth'
 
+```
+
+Linking with SpaBERT-large
+```
+python3 unsupervised_wiki_location_allcand.py --model_name='spatial_bert-large' --sep_between_neighbors \
+ --spatial_bert_weight_dir='weights/' --spatial_bert_weight_name='mlm_mem_keeppos_ep1_iter02000_0.4400.pth'
+```
+
+Data used for linking from USGS historical maps to WikiData KB is provided [here](https://drive.google.com/drive/folders/1qKJnj71qxnca_TaygK-Y3EIySnMyFpFn?usp=share_link)
