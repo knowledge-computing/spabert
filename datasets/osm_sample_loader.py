@@ -31,7 +31,7 @@ class PbfMapDataset(SpatialDataset):
         self.random_remove_neighbor = random_remove_neighbor
         self.type_key_str  = type_key_str # key name of the class type in the input data dictionary
  
-        super(PbfMapDataset, self).__init__(tokenizer , max_token_len , distance_norm_factor, sep_between_neighbors )
+        super(PbfMapDataset, self).__init__(self.tokenizer , max_token_len , distance_norm_factor, sep_between_neighbors )
         
 
     def read_file(self, data_file_path, mode):
@@ -128,7 +128,7 @@ class PbfMapDatasetMarginRanking(SpatialDataset):
         self.mode = mode
         
  
-        super(PbfMapDatasetMarginRanking, self).__init__(tokenizer , max_token_len , distance_norm_factor, sep_between_neighbors )
+        super(PbfMapDatasetMarginRanking, self).__init__(self.tokenizer , max_token_len , distance_norm_factor, sep_between_neighbors )
         
 
     def read_file(self, data_file_path, mode):

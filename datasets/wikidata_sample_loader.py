@@ -25,7 +25,7 @@ class Wikidata_Random_Dataset(SpatialDataset):
         self.read_file(data_file_path)
 
         
-        super(Wikidata_Random_Dataset, self).__init__(tokenizer , max_token_len , distance_norm_factor, sep_between_neighbors )
+        super(Wikidata_Random_Dataset, self).__init__(self.tokenizer , max_token_len , distance_norm_factor, sep_between_neighbors )
 
     def read_file(self, data_file_path):
 
@@ -83,7 +83,7 @@ class Wikidata_Geocoord_Dataset(SpatialDataset):
         self.read_file(data_file_path)
 
         
-        super(Wikidata_Geocoord_Dataset, self).__init__(tokenizer , max_token_len , distance_norm_factor, sep_between_neighbors )
+        super(Wikidata_Geocoord_Dataset, self).__init__(self.tokenizer , max_token_len , distance_norm_factor, sep_between_neighbors )
 
     def read_file(self, data_file_path):
 

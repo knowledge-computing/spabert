@@ -28,7 +28,7 @@ class USGS_MapDataset(SpatialDataset):
         self.read_file(data_file_path)
 
         
-        super(USGS_MapDataset, self).__init__(tokenizer , max_token_len , distance_norm_factor, sep_between_neighbors )
+        super(USGS_MapDataset, self).__init__(self.tokenizer , max_token_len , distance_norm_factor, sep_between_neighbors )
         
     def read_file(self, data_file_path):
 
