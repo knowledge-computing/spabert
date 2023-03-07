@@ -127,7 +127,7 @@ class SpatialDataset(Dataset):
 
         
         # mask token in the pseudo sentence
-        rand_token = np.random.uniform(size = sent_len)
+        rand_token = np.random.uniform(size = len(pseudo_sentence))
         # do not mask out cls and sep token. True: masked tokens False: Keey original token
         token_mask_arr = (rand_token <0.15) & (np.array(pseudo_sentence) != self.cls_token_id) & (np.array(pseudo_sentence) != self.sep_token_id) & (np.array(pseudo_sentence) != self.pad_token_id)
         token_mask_indices = np.where(token_mask_arr)[0]
