@@ -2,6 +2,9 @@
 
 This repo contains code for [SpaBERT: A Pretrained Language Model from Geographic Data for Geo-Entity Representation](https://arxiv.org/abs/2210.12213). SpaBERT provides a general-purpose geo-entity representation based on neighboring entities in geospatial data. SpaBERT extends BERT to capture linearized spatial context, while incorporating a spatial coordinate embedding mechanism to preserve spatial relations of entities in the 2-dimensional space. SpaBERT is pretrained with masked language modeling and masked entity prediction tasks to learn spatial dependencies.
 
+* Slides: [emnlp2022_spabert_zekun.pdf](https://github.com/zekun-li/spabert/files/11006078/emnlp2022_1717_zekun.pdf)
+
+
 ## Pretraining 
 Pretrained model weights can be downloaded from the Google Drive for [SpaBERT-base](https://drive.google.com/file/d/1l44FY3DtDxzM_YVh3RR6PJwKnl80IYWB/view?usp=sharing) and [SpaBERT-large](https://drive.google.com/file/d/1LeZayTR92R5bu9gH_cGCwef7nnMX35cR/view?usp=share_link). 
 
