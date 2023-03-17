@@ -62,7 +62,7 @@ Data used for linking from USGS historical maps to WikiData KB is provided [here
 ```
 @article{li2022spabert,
   title={SpaBERT: A Pretrained Language Model from Geographic Data for Geo-Entity Representation},
-  author={Li, Zekun and Kim, Jina and Chiang, Yao-Yi and Chen, Muhao},
+  author={Zekun Li, Jina Kim, Yao-Yi Chiang and Muhao Chen},
   journal={EMNLP},
   year={2022}
 }
