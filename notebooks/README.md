@@ -6,6 +6,8 @@ Link to SpaBERT's original GitHub repository [https://github.com/zekun-li/spaber
 
 Run pip install requirements.txt before starting the jupyter notebooks to ensure you have all required packages
 
+To install the pre-trained spabert weights or train your own model follow the instructions on the SpaBERT README.md and drop the weights into the sample_datasets folder
+
 ## Description of Jupyter Notebooks
 
 ### [spabert-fine-tuning.ipynb](https://github.com/Jina-Kim/spabert-tutorials/blob/main/spabert-fine-tuning.ipynb)
