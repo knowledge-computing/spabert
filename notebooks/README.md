@@ -6,7 +6,18 @@ Link to SpaBERT's original GitHub repository [https://github.com/zekun-li/spaber
 
 Run pip install requirements.txt before starting the jupyter notebooks to ensure you have all required packages
 
-To install the pre-trained spabert weights or train your own model follow the instructions on the SpaBERT README.md and drop the weights into the sample_datasets folder
+# Installing Pre-Trained Weights
+
+To install pre-trained weights run the following commands:
+
+Make sure you have git-lfs installed (https://git-lfs.com)
+
+git lfs install
+git clone https://huggingface.co/knowledge-computing-lab/spabert-base-uncased
+
+once the dataset is installed you'll see a file called mlm_mem_keeppos_ep0_iter06000_0.2936.pth
+
+Move this file to notebooks/tutorial_datasets before running the fine-tuning step
 
 ## Jupyter Notebook Descriptions
 
