@@ -2,8 +2,9 @@ import numpy as np
 import torch
 from torch.utils.data import Dataset
 import json
-
-from spabert.datasets.dataset_loader import SpatialDataset
+import sys
+sys.path.append("../")
+from datasets.dataset_loader import SpatialDataset
 from transformers import RobertaTokenizer, BertTokenizer
 
 class WHGDataset(SpatialDataset):
