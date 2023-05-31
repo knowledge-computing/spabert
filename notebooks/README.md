@@ -15,9 +15,22 @@ Make sure you have git-lfs installed (https://git-lfs.com)
 git lfs install
 git clone https://huggingface.co/knowledge-computing-lab/spabert-base-uncased
 
-once the dataset is installed you'll see a file called mlm_mem_keeppos_ep0_iter06000_0.2936.pth
+Once the dataset is installed you'll see a file called mlm_mem_keeppos_ep0_iter06000_0.2936.pth
 
 Move this file to notebooks/tutorial_datasets before running the fine-tuning step
+
+# Installing Fine-Tuned Weights
+
+To install fine-tuned weights run the following commands:
+
+Make sure you have git-lfs installed (https://git-lfs.com)
+
+git lfs install
+git clone https://huggingface.co/knowledge-computing-lab/spabert-base-uncased
+
+Once the dataset is installed you'll see a file called spabert-base-uncased-finetuned-osm-mn/spabert-base-uncased-finetuned-osm-mn.pth
+
+Move this file to notebooks/tutorial_datasets before running the entity-linking step
 
 ## Jupyter Notebook Descriptions
 
