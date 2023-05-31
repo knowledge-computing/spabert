@@ -11,7 +11,7 @@ To install the pre-trained spabert weights or train your own model follow the in
 ## Jupyter Notebook Descriptions
 
 ### [spabert-fine-tuning.ipynb](https://github.com/Jina-Kim/spabert-tutorials/blob/main/spabert-fine-tuning.ipynb)
-This Jupyter Notebook provides on how to fine-tune spabert using point data from OpenStreetMap (OSM) in New York or Minnesota depending on the users choice. SpaBERT is pre-trained using data from California and London using OSM Point data. Instructions for pre-training your own model can be found on the spabert github
+This Jupyter Notebook provides on how to fine-tune spabert using point data from OpenStreetMap (OSM) in Minnesota. SpaBERT is pre-trained using data from California and London using OSM Point data. Instructions for pre-training your own model can be found on the spabert github
 Here are the steps to run:
 
 1. Define which dataset you want to use (e.g., OSM in New York or Minnesota)
