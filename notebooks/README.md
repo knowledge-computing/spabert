@@ -46,11 +46,11 @@ There are two types of tutorial datasets used for fine-tuning SpaBERT, CSV and J
 
 - JSON files - ready-to-use files for SpaBERT's data loader - [SpatialDataset](../datasets/dataset_loader.py)
     - OSM Minnesota State `./tutorial_datasets/spabert_osm_mn.json`
-      - Generated from `./tutorial_datasets/osm_mn.csv` using XX.py
+      - Generated from `./tutorial_datasets/osm_mn.csv` using spabert-fine-tuning.ipynb
     - WHG `./tutorial_datasets/spabert_whg_wikidata.json`
       - Geo-entities from WHG that have the link to Wikidata
     - Wikidata `./tutorial_datasets/spabert_wikidata_sampled.json`
-      - Sampled entities in Wikidata that have coordinates (PXX)
+      - Sampled from entities delivered by WHG. These entities have been linked between WHG and Wikidata by WHG prior to being delivered to us.
     
     
 The file contains json objects on each line. Each json object describes the spatial context of an entity using nearby entities.
