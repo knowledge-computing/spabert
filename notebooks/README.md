@@ -8,6 +8,21 @@ Run pip install requirements.txt before starting the jupyter notebooks to ensure
 
 To install the pre-trained spabert weights or train your own model follow the instructions on the SpaBERT README.md and drop the weights into the sample_datasets folder
 
+### Dataset Descriptions
+There are two types of datasets used for fine-tuning SpaBERT, a .cvs file and a .json file that is dervied from data in the .csv file. The .csv files used for fine-tuning in this tutorial are osm_mn.csv and osm_ny.csv. Both of these datasets are samples taken from OpenStreetMap (OSM). They are structured as follows:
+| row_id | name | latitude | longitude |
+| ------ | ---- | -------- | --------- |
+|    0   | Duluth | -92.1215 | 46.7729 |
+|    1   | Green Valley | -95.757 | 44.5269 | 
+
+The second dataset used for fine-tuning is constructed using the above .csv data and is labeled SPABERT_finetuning_data.json. The file contains json objects on each line. Each json object describes the spatial context of an entity using nearby entities. A sample json object looks like the following:
+
+{"info": {"name": "Duluth", "geometry": {"coordinates": [46.7729, -92.1215]}}, "neighbor_info":{"name_list":["Duluth", "Chinese Peace Belle and Garden", ...], "geometry_list":[{"coordinates":[46.7729, -92.1215]}, {"coordinates":[46.7770, -92.1241]}]}}
+
+To perform entity-linking on SpaBERT you must have a dataset structued similarly to the second dataset used for fine-tuning. They are in the whg.json and wikidata.json files which are strucutred in the exact same way. A sample json object looks like the following: 
+
+{"info": {"name": "Duluth", "geometry": {"coordinates": [46.7729, -92.1215]}, "qid": "Q485708"}, "neighbor_info":{"name_list":["Duluth", "Chinese Peace Belle and Garden", ...], "geometry_list":[{"coordinates":[46.7729, -92.1215]}, {"coordinates":[46.7770, -92.1241]}]}}
+
 ## Description of Jupyter Notebooks
 
 ### [spabert-fine-tuning.ipynb](https://github.com/Jina-Kim/spabert-tutorials/blob/main/spabert-fine-tuning.ipynb)
