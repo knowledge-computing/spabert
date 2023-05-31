@@ -6,31 +6,18 @@ Link to SpaBERT's original GitHub repository [https://github.com/zekun-li/spaber
 
 Run pip install requirements.txt before starting the jupyter notebooks to ensure you have all required packages
 
-# Installing Pre-Trained Weights
+## Installing Model Weights
 
-To install pre-trained weights run the following commands:
-
-Make sure you have git-lfs installed (https://git-lfs.com)
-
-git lfs install
-git clone https://huggingface.co/knowledge-computing-lab/spabert-base-uncased
-
-Once the dataset is installed you'll see a file called mlm_mem_keeppos_ep0_iter06000_0.2936.pth
-
-Move this file to notebooks/tutorial_datasets before running the fine-tuning step
-
-# Installing Fine-Tuned Weights
-
-To install fine-tuned weights run the following commands:
+To install pre-trained & fine-tuned model weights run the following commands:
 
 Make sure you have git-lfs installed (https://git-lfs.com)
 
-git lfs install
-git clone https://huggingface.co/knowledge-computing-lab/spabert-base-uncased
+`git lfs install`
+`git clone https://huggingface.co/knowledge-computing-lab/spabert-base-uncased`
+`git clone https://huggingface.co/knowledge-computing-lab/spabert-base-uncased-finetuned-osm-mn`
 
-Once the dataset is installed you'll see a file called spabert-base-uncased-finetuned-osm-mn/spabert-base-uncased-finetuned-osm-mn.pth
-
-Move this file to notebooks/tutorial_datasets before running the entity-linking step
+Once the model weight is installed you'll see a file called `mlm_mem_keeppos_ep0_iter06000_0.2936.pth` and `spabert-base-uncased-finetuned-osm-mn.pth`
+Move this file to notebooks/tutorial_datasets before running notebooks
 
 ## Jupyter Notebook Descriptions
 
