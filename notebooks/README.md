@@ -1,6 +1,3 @@
-# Setup 
-1. git clone [this-repo]
-
 # Tutorials for Testing and Fine-Tuning SpaBERT
 
 This repository provides two Jupyter Notebooks for testing entity linking (one of the downstream tasks of SpaBERT) and fine-tuning procedure to train on geo-entitites from other knowledge bases (e.g., [World Historical Gazetteer](https://whgazetteer.org/))
