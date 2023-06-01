@@ -19,7 +19,7 @@ The requirements.txt file will be located in the spabert directory.
  | - utils
  | - __init__.py
  | - README.md
- | - requirements.txt
+ | - **requirements.txt**
  | - train_mlm.py
 ```
 
