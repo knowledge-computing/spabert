@@ -10,14 +10,28 @@ Run pip install requirements.txt before starting the jupyter notebooks to ensure
 
 To install pre-trained & fine-tuned model weights run the following commands:
 
-Make sure you have git-lfs installed (https://git-lfs.com)
+Make sure you have git-lfs installed (https://git-lfs.com windows & mac) (https://github.com/git-lfs/git-lfs/blob/main/INSTALLING.md linux)
+
+run the follow commands separately in the order they appear
 
 `git lfs install`
 `git clone https://huggingface.co/knowledge-computing-lab/spabert-base-uncased`
 `git clone https://huggingface.co/knowledge-computing-lab/spabert-base-uncased-finetuned-osm-mn`
 
 Once the model weight is installed you'll see a file called `mlm_mem_keeppos_ep0_iter06000_0.2936.pth` and `spabert-base-uncased-finetuned-osm-mn.pth`
-Move this file to notebooks/tutorial_datasets before running notebooks
+Move these files to the tutorial_datasets folder. After moving them you file structure should look like this
+- notebooks
+  | - tutorial_datasets
+  |   | - mlm_mem_keeppos_ep0_iter06000_0.2936.pth
+  |   | - osm_mn.csv
+  |   | - SPABERT_finetuning_data.json
+  |   | - spabert_whg_wikidata.json
+  |   | - spabert_wikidata_sampled.json
+  |   | - spabert-base-uncased-finetuned-osm-mn.pth
+  | - README.md
+  | - spabert-entity-linking.ipynb
+  | - spabert-fine-tuning.ipynb
+  | - WHGDataset.py
 
 ## Jupyter Notebook Descriptions
 
