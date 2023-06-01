@@ -20,6 +20,7 @@ run the follow commands separately in the order they appear
 
 Once the model weight is installed you'll see a file called `mlm_mem_keeppos_ep0_iter06000_0.2936.pth` and `spabert-base-uncased-finetuned-osm-mn.pth`
 Move these files to the tutorial_datasets folder. After moving them you file structure should look like this
+```
 - notebooks
   | - tutorial_datasets
   |   | - mlm_mem_keeppos_ep0_iter06000_0.2936.pth
@@ -32,7 +33,7 @@ Move these files to the tutorial_datasets folder. After moving them you file str
   | - spabert-entity-linking.ipynb
   | - spabert-fine-tuning.ipynb
   | - WHGDataset.py
-
+```
 ## Jupyter Notebook Descriptions
 
 ### [spabert-fine-tuning.ipynb](https://github.com/Jina-Kim/spabert-tutorials/blob/main/spabert-fine-tuning.ipynb)
