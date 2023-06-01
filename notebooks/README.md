@@ -4,7 +4,24 @@ This repository provides two Jupyter Notebooks for testing entity linking (one o
 
 Link to SpaBERT's original GitHub repository [https://github.com/zekun-li/spabert](https://github.com/zekun-li/spabert)
 
-Run pip install requirements.txt before starting the jupyter notebooks to ensure you have all required packages
+Before starting the jupyter notebooks run the following lines to make sure you have all required packages:
+
+`pip install requirements.txt`
+
+The requirements.txt file will be located in the spabert directory.
+```
+-spabert
+ | - datasets
+ | - experiments
+ | - models
+ | - models
+ | - notebooks
+ | - utils
+ | - __init__.py
+ | - README.md
+ | - requirements.txt
+ | - train_mlm.py
+```
 
 ## Installing Model Weights
 
@@ -36,7 +53,7 @@ Move these files to the tutorial_datasets folder. After moving them you file str
 ```
 ## Jupyter Notebook Descriptions
 
-### [spabert-fine-tuning.ipynb](https://github.com/Jina-Kim/spabert-tutorials/blob/main/spabert-fine-tuning.ipynb)
+### [spabert-fine-tuning.ipynb](https://github.com/Jina-Kim/spabert/blob/main/notebooks/spabert-fine-tuning.ipynb)
 This Jupyter Notebook provides on how to fine-tune spabert using point data from OpenStreetMap (OSM) in Minnesota. SpaBERT is pre-trained using data from California and London using OSM Point data. Instructions for pre-training your own model can be found on the spabert github
 Here are the steps to run:
 
@@ -47,7 +64,7 @@ Here are the steps to run:
 5. Load dataset using the SpaBERT data loader
 6. Train model for 1 epoch using fine-tuning model and save
 
-### [spabert-entity-linking.ipynb](https://github.com/Jina-Kim/spabert-tutorials/blob/main/spabert-entity-linking.ipynb)
+### [spabert-entity-linking.ipynb](https://github.com/Jina-Kim/spabert/blob/main/notebooks/spabert-entity-linking.ipynb)
 This Jupyter Notebook provides on how to create an entity-linking dataset and how to perform entity-linking using SpaBERT. The dataset used here is a pre-matched dataset between World Historical Gazetteer (WHG) and Wikidata. The methods used to evaluate this model will be Hits@K and Mean Reciprocal Rank (MRR)
 Here are the steps to run:
 
