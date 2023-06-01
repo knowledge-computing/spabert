@@ -1,8 +1,19 @@
+# Setup 
+1. git clone [this-repo]
+
 # Tutorials for Testing and Fine-Tuning SpaBERT
 
 This repository provides two Jupyter Notebooks for testing entity linking (one of the downstream tasks of SpaBERT) and fine-tuning procedure to train on geo-entitites from other knowledge bases (e.g., [World Historical Gazetteer](https://whgazetteer.org/))
 
 Link to SpaBERT's original GitHub repository [https://github.com/zekun-li/spabert](https://github.com/zekun-li/spabert)
+
+The first step is cloning the spabert repo onto your machine. Run the following line of code to do this.
+
+`git clone [this-repo]`
+
+You will need to have IPython Kernel for Jupyter installed before running the code in this tutorial. Run the following line of code to ensure ipython is installed
+
+`pip install ipykernel`
 
 Before starting the jupyter notebooks run the following lines to make sure you have all required packages:
 
@@ -19,7 +30,7 @@ The requirements.txt file will be located in the spabert directory.
  | - utils
  | - __init__.py
  | - README.md
- | - _requirements.txt_
+ | - requirements.txt
  | - train_mlm.py
 ```
 
