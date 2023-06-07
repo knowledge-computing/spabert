@@ -1,18 +1,16 @@
 # Tutorials for Testing and Fine-Tuning SpaBERT
 
-This repository provides two Jupyter Notebooks for testing entity linking (one of the downstream tasks of SpaBERT) and fine-tuning procedure to train on geo-entitites from other knowledge bases (e.g., [World Historical Gazetteer](https://whgazetteer.org/))
+This repository provides two Jupyter Notebooks for testing entity linking (one of the downstream tasks of SpaBERT) and fine-tuning procedure to train on geo-entities from other knowledge bases (e.g., [World Historical Gazetteer](https://whgazetteer.org/))
 
-Link to SpaBERT's original GitHub repository [https://github.com/zekun-li/spabert](https://github.com/zekun-li/spabert)
+1. The first step is cloning the SpaBERT repository onto your machine. Run the following line of code to do this.
 
-The first step is cloning the spabert repo onto your machine. Run the following line of code to do this.
+`git clone https://github.com/zekun-li/spabert.git`
 
-`git clone [this-repo]`
-
-You will need to have IPython Kernel for Jupyter installed before running the code in this tutorial. Run the following line of code to ensure ipython is installed
+2. You will need to have IPython Kernel for Jupyter installed before running the code in this tutorial. Run the following line of code to ensure ipython is installed
 
 `pip install ipykernel`
 
-Before starting the jupyter notebooks run the following lines to make sure you have all required packages:
+3. Before starting the jupyter notebooks run the following lines to make sure you have all required packages:
 
 `pip install requirements.txt`
 
@@ -33,24 +31,24 @@ The requirements.txt file will be located in the spabert directory.
 
 ## Installing Model Weights
 
-To install pre-trained & fine-tuned model weights run the following commands:
-
 Make sure you have git-lfs installed (https://git-lfs.com windows & mac) (https://github.com/git-lfs/git-lfs/blob/main/INSTALLING.md linux)
 
-run the follow commands separately in the order they appear
+Please run the follow commands separately in the order to install pre-trained & fine-tuned model weights 
 
 `git lfs install`
+
 `git clone https://huggingface.co/knowledge-computing-lab/spabert-base-uncased`
+
 `git clone https://huggingface.co/knowledge-computing-lab/spabert-base-uncased-finetuned-osm-mn`
 
-Once the model weight is installed you'll see a file called `mlm_mem_keeppos_ep0_iter06000_0.2936.pth` and `spabert-base-uncased-finetuned-osm-mn.pth`
-Move these files to the tutorial_datasets folder. After moving them you file structure should look like this
+Once the model weight is installed, you'll see a file called `mlm_mem_keeppos_ep0_iter06000_0.2936.pth` and `spabert-base-uncased-finetuned-osm-mn.pth`
+Move these files to the tutorial_datasets folder. After moving them, the file structure should look like this:
 ```
 - notebooks
   | - tutorial_datasets
   |   | - mlm_mem_keeppos_ep0_iter06000_0.2936.pth
   |   | - osm_mn.csv
-  |   | - SPABERT_finetuning_data.json
+  |   | - spabert_osm_mn.json
   |   | - spabert_whg_wikidata.json
   |   | - spabert_wikidata_sampled.json
   |   | - spabert-base-uncased-finetuned-osm-mn.pth
@@ -59,6 +57,7 @@ Move these files to the tutorial_datasets folder. After moving them you file str
   | - spabert-fine-tuning.ipynb
   | - WHGDataset.py
 ```
+
 ## Jupyter Notebook Descriptions
 
 ### [spabert-fine-tuning.ipynb](https://github.com/Jina-Kim/spabert/blob/main/notebooks/spabert-fine-tuning.ipynb)
