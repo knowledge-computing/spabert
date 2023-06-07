@@ -1,27 +1,66 @@
 # Tutorials for Testing and Fine-Tuning SpaBERT
 
-This repository provides two Jupyter Notebooks for testing entity linking (one of the downstream tasks of SpaBERT) and fine-tuning procedure to train on geo-entitites from other knowledge bases (e.g., [World Historical Gazetteer](https://whgazetteer.org/))
+This repository provides two Jupyter Notebooks for testing entity linking (one of the downstream tasks of SpaBERT) and fine-tuning procedure to train on geo-entities from other knowledge bases (e.g., [World Historical Gazetteer](https://whgazetteer.org/))
 
-Link to SpaBERT's original GitHub repository [https://github.com/zekun-li/spabert](https://github.com/zekun-li/spabert)
+1. The first step is cloning the SpaBERT repository onto your machine. Run the following line of code to do this.
 
-Run pip install requirements.txt before starting the jupyter notebooks to ensure you have all required packages
+`git clone https://github.com/zekun-li/spabert.git`
+
+2. You will need to have IPython Kernel for Jupyter installed before running the code in this tutorial. Run the following line of code to ensure ipython is installed
+
+`pip install ipykernel`
+
+3. Before starting the jupyter notebooks run the following lines to make sure you have all required packages:
+
+`pip install requirements.txt`
+
+The requirements.txt file will be located in the spabert directory.
+```
+-spabert
+ | - datasets
+ | - experiments
+ | - models
+ | - models
+ | - notebooks
+ | - utils
+ | - __init__.py
+ | - README.md
+ | - requirements.txt
+ | - train_mlm.py
+```
 
 ## Installing Model Weights
 
-To install pre-trained & fine-tuned model weights run the following commands:
+Make sure you have git-lfs installed (https://git-lfs.com windows & mac) (https://github.com/git-lfs/git-lfs/blob/main/INSTALLING.md linux)
 
-Make sure you have git-lfs installed (https://git-lfs.com)
+Please run the follow commands separately in the order to install pre-trained & fine-tuned model weights 
 
 `git lfs install`
+
 `git clone https://huggingface.co/knowledge-computing-lab/spabert-base-uncased`
+
 `git clone https://huggingface.co/knowledge-computing-lab/spabert-base-uncased-finetuned-osm-mn`
 
-Once the model weight is installed you'll see a file called `mlm_mem_keeppos_ep0_iter06000_0.2936.pth` and `spabert-base-uncased-finetuned-osm-mn.pth`
-Move this file to notebooks/tutorial_datasets before running notebooks
+Once the model weight is installed, you'll see a file called `mlm_mem_keeppos_ep0_iter06000_0.2936.pth` and `spabert-base-uncased-finetuned-osm-mn.pth`
+Move these files to the tutorial_datasets folder. After moving them, the file structure should look like this:
+```
+- notebooks
+  | - tutorial_datasets
+  |   | - mlm_mem_keeppos_ep0_iter06000_0.2936.pth
+  |   | - osm_mn.csv
+  |   | - spabert_osm_mn.json
+  |   | - spabert_whg_wikidata.json
+  |   | - spabert_wikidata_sampled.json
+  |   | - spabert-base-uncased-finetuned-osm-mn.pth
+  | - README.md
+  | - spabert-entity-linking.ipynb
+  | - spabert-fine-tuning.ipynb
+  | - WHGDataset.py
+```
 
 ## Jupyter Notebook Descriptions
 
-### [spabert-fine-tuning.ipynb](https://github.com/Jina-Kim/spabert-tutorials/blob/main/spabert-fine-tuning.ipynb)
+### [spabert-fine-tuning.ipynb](https://github.com/Jina-Kim/spabert/blob/main/notebooks/spabert-fine-tuning.ipynb)
 This Jupyter Notebook provides on how to fine-tune spabert using point data from OpenStreetMap (OSM) in Minnesota. SpaBERT is pre-trained using data from California and London using OSM Point data. Instructions for pre-training your own model can be found on the spabert github
 Here are the steps to run:
 
@@ -32,7 +71,7 @@ Here are the steps to run:
 5. Load dataset using the SpaBERT data loader
 6. Train model for 1 epoch using fine-tuning model and save
 
-### [spabert-entity-linking.ipynb](https://github.com/Jina-Kim/spabert-tutorials/blob/main/spabert-entity-linking.ipynb)
+### [spabert-entity-linking.ipynb](https://github.com/Jina-Kim/spabert/blob/main/notebooks/spabert-entity-linking.ipynb)
 This Jupyter Notebook provides on how to create an entity-linking dataset and how to perform entity-linking using SpaBERT. The dataset used here is a pre-matched dataset between World Historical Gazetteer (WHG) and Wikidata. The methods used to evaluate this model will be Hits@K and Mean Reciprocal Rank (MRR)
 Here are the steps to run:
 
