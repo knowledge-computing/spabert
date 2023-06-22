@@ -24,7 +24,7 @@ The goal is to predict a geo-entity’s semantic type (e.g., transportation and 
 
 Models trained on OSM in London and California region can be downloaded from Google Drive for [SpaBERT-base](https://drive.google.com/file/d/1XFcA3sxC4wTlt7VjvMp1zNrWY5rjafzE/view?usp=share_link) and [SpaBERT-large](https://drive.google.com/file/d/12_FDVeSYkl_HQ61JmuMU6cRjQdKNpgR_/view?usp=share_link)
 
-Data used for training can be downloaded [here](https://drive.google.com/drive/folders/1uyvGdiJdu-Cym4dOKhQLIkKpfgHvfo01?usp=share_link)
+Data used for training and testing can be downloaded [here](https://drive.google.com/drive/folders/1uyvGdiJdu-Cym4dOKhQLIkKpfgHvfo01?usp=share_link)
 
 * Sample code for training SpaBERT-base typing model
 
